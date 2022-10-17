@@ -1,1 +1,15 @@
 <h1>welcome to edupoly</h1>
+{{title}}
+{{firstname}}
+<h4>{{firstname}}</h4>
+<input type="text" [(ngModel)]="firstname">
+{{countries}}
+<ol>
+  <li *ngFor="let c of countries">
+    {{c}}
+  </li>
+</ol>
+<button (click)="addCountry()">Add Country</button>
+<!-- 
+  event binding
+ -->
