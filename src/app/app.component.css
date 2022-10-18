@@ -1,3 +1,15 @@
-h1{
-  color:red;
+.male{
+  background-color: blue;
+  display: block;
+  width:100px;
+  padding:10px;
+}
+.female{
+  background-color: pink;
+  display: block;
+  width:100px;
+  padding:10px;
+}
+.hide{
+  display: none;
 }

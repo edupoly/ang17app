@@ -1,24 +1,25 @@
-<input type="text" [(ngModel)]="newtask">
-<br/>
-<input type="radio" [(ngModel)]="gender" value="female">:Female &nbsp;&nbsp;&nbsp;
-<input type="radio" [(ngModel)]="gender" value="male">:Male &nbsp;&nbsp;&nbsp;
-<input type="radio" [(ngModel)]="gender" value="others">:Others &nbsp;&nbsp;&nbsp;
-<h1>{{gender}}</h1>
-<span *ngFor="let tech of technologies">
-  <input type="checkbox" value={{tech}} (change)="xyz($event)">:{{tech}}
-</span>
-<ul>
-  <li *ngFor="let tech of selectedTechs">
-    {{tech}}
-  </li>
-</ul>
-<br>
-<br>
-<br>
-<br>
-<button (click)="addTask()">Add Task</button>
-<ul>
-  <li *ngFor="let task of tasks">
-    {{task}}
-  </li>
-</ul>
+
+<div class="container m-4">
+  <input type="radio" [(ngModel)]="gender" value="female">:Female &nbsp;&nbsp;&nbsp;
+  <input type="radio" [(ngModel)]="gender" value="male">:Male &nbsp;&nbsp;&nbsp;
+  <input type="radio" [(ngModel)]="gender" value="others">:Others &nbsp;&nbsp;&nbsp;
+  <br/>
+
+  <div [class]="gender==='male'?'male':'hide'" >
+    <img width="100%" src="https://img.freepik.com/premium-vector/man-face-avatar-cartoon-character_18591-55466.jpg" alt="">
+  </div>
+  <div [class]="gender==='female'?'female':'hide'">
+    <img width="100%" src="https://img.freepik.com/premium-vector/african-american-woman-avatar-with-glasses-portrait-young-girl-vector-illustration-face_217290-363.jpg" alt="">
+  </div>
+
+  <!-- <div class="male" [style]="gender!=='male'?{display:'none'}:''">
+    <img width="100%" src="https://img.freepik.com/premium-vector/man-face-avatar-cartoon-character_18591-55466.jpg" alt="">
+  </div>
+  <div class="female" [style]="gender!=='female'?{display:'none'}:''">
+    <img width="100%" src="https://img.freepik.com/premium-vector/african-american-woman-avatar-with-glasses-portrait-young-girl-vector-illustration-face_217290-363.jpg" alt="">
+  </div>
+   -->
+  <!-- <img [style]="gender==='male'?{display:'block','background-color':'blue'}:{display:'none'}" width='100px' src="https://img.freepik.com/premium-vector/man-face-avatar-cartoon-character_18591-55466.jpg" alt="">
+  <img [style]="gender==='female'?{display:'block'}:{display:'none'}" width='100px' src="https://img.freepik.com/premium-vector/african-american-woman-avatar-with-glasses-portrait-young-girl-vector-illustration-face_217290-363.jpg" alt=""> -->
+</div>
+

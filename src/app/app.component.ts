@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  clr='';
   tasks=['clean washing machine','repair mobile','hire hr','search good place'];
   technologies=['html','css','js','nodejs','reactjs','angular','express','bootstrap']
   selectedTechs:any=[];
