@@ -1,0 +1,10 @@
+<div class="border m-2 p-2">
+  <h3>Todo List</h3>
+  <div class="input-group">
+    <input type="text" class="form-control" [(ngModel)]="newtask">
+    <button class="button input-group-title" (click)="addTask()">AddTodo</button>
+  </div>
+  <ol>
+    <li *ngFor="let task of tasks">{{task}}</li>
+  </ol>
+</div>
