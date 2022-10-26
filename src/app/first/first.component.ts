@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -13,4 +13,10 @@ export class FirstComponent implements OnInit {
   }
 
   @Input() x='';
+
+  @Output() xyz = new EventEmitter();
+
+  callABC(){
+    this.xyz.emit("Welcome to Output event");
+  }
 }

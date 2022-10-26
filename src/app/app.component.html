@@ -1,8 +1,8 @@
 
-<div class="border border-sm m-2 p-2">
+<div class="border border-sm m-2 p-2 bg-success">
   <h1>{{firstname}}</h1>
   <input type="text" [value]="firstname">
   <h1 [title]="firstname">Myname is in tooltip</h1>
-  <app-first [x]="firstname"></app-first>
+  <app-first [x]="firstname" (xyz)="abc($event)"></app-first>
   <app-second></app-second>
 </div>
