@@ -1,0 +1,8 @@
+<h3 [class]="task.status===true?'bg-success':'bg-danger'">
+  {{task.title}}
+
+  <button *ngIf="task.status===true" (click)="emitToggleTaskStatus()">Undo</button>
+  <button *ngIf="task.status===false" (click)="emitToggleTaskStatus()">Done</button>
+
+  <button (click)="emitDelTaskEvent()">delete</button>
+</h3>

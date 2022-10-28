@@ -12,8 +12,30 @@ export class TodolistComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  tasks:any[]=[];
+  tasks:any[]=[
+    {
+      title:'praveen',
+      status:true
+    },
+    {
+      title:'rahul',
+      status:false
+    },
+    {
+      title:'kiran',
+      status:false
+    },
+    {
+      title:'stuthi',
+      status:false
+    },
+    {
+      title:'hima',
+      status:true
+    },
+  ];
   newTaskTitle = '';
+
   addTask(){
     var newTask = {
       title:this.newTaskTitle,
@@ -22,7 +44,13 @@ export class TodolistComponent implements OnInit {
     this.tasks.push(newTask)
     console.log(this.tasks)
   }
+
   toggleStatus(index:number){
     this.tasks[index].status=!this.tasks[index].status
   }
+
+  deleteTask(i:any){
+    this.tasks.splice(i,1)
+  }
+
 }
