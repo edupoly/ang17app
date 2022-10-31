@@ -7,5 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang17app';
-  
+  constructor(){
+    console.log("App constructor called")
+  }
+  ngOnChanges(){
+    console.log("App ngOnChanges called")
+  }
+  ngOnInit(){
+    console.log("App ngOnInit called")
+  }
+  ngDoCheck(){
+    console.log("App ngDoCheck called")
+  }
+
+  ngAfterContentInit(){
+    console.log("App ngAfterContentInit called")
+  }
 }

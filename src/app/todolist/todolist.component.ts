@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodolistComponent implements OnInit {
 
-  constructor() { }
+  constructor(){
+    console.log("Todolist constructor called")
+  }
 
-  ngOnInit(): void {
+  ngOnChanges(){
+    console.log("Todolist ngOnChanges called")
+  }
+
+  ngOnInit(){
+    console.log("Todolist ngOnInit called")
+  }
+
+  ngDoCheck(){
+    console.log("Todolist ngDoCheck called")
+  }
+
+  ngAfterContentInit(){
+    console.log("Todolist ngAfterContentInit called")
   }
 
   tasks:any[]=[

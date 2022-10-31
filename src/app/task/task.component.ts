@@ -7,9 +7,20 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  constructor() { }
+  constructor(){
+    console.log("Task constructor called")
+  }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    console.log("Task ngOnInit called")
+  }
+
+  ngOnChanges(){
+    console.log("Task ngOnChanges called")
+  }
+
+  ngDoCheck(){
+    console.log("Task ngDoCheck called")
   }
 
   @Input() task:any;
