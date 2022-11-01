@@ -22,7 +22,12 @@ export class TaskComponent implements OnInit {
   ngDoCheck(){
     console.log("Task ngDoCheck called")
   }
-
+  ngAfterContentInit(){
+    console.log("Task content init")
+  }
+  ngAfterContentChecked(){
+    console.log("Task content checked")
+  }
   @Input() task:any;
   @Input() ind:any;
 

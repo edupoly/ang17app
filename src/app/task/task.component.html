@@ -4,5 +4,8 @@
   <button *ngIf="task.status===true" (click)="emitToggleTaskStatus()">Undo</button>
   <button *ngIf="task.status===false" (click)="emitToggleTaskStatus()">Done</button>
 
-  <button (click)="emitDelTaskEvent()">delete</button>
+  <button (click)="emitDelTaskEvent()">
+    delete
+  </button>
+  <!-- <ng-content></ng-content> -->
 </h3>
