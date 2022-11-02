@@ -1,5 +1,8 @@
 <div class="border m-2 p-2">
-  <app-header></app-header>
+  <button (click)="inc()">Increment</button>
+  <b>{{c}}</b>
+  <button (click)="dec()">Decrement</button>
+  <app-header [abcd]="c"></app-header>
   <app-main></app-main>
   <app-footer></app-footer>
 </div>

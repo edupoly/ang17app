@@ -11,5 +11,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  ngDoCheck(){
+    console.log("main ngDoCheck called")
+  }
 }
