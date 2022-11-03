@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ang17app';
-  constructor(public http:HttpClient){}
+  countries:any=[]
+  constructor(public http:HttpClient){
+    this.http.get("https://restcountries.com/v2/all")
+    .subscribe((res)=>{
+      this.countries=res;
+    })
+  }
 }

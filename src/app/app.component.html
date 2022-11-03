@@ -1,1 +1,42 @@
 <h1>welcome to edupoly</h1>
+<div style="overflow-x: scroll;height: 400px;">
+  <table class="table table-border table-striped" border="2" cellpadding="10px" cellspacing="0" align="center">
+    <thead class="position-sticky top-0 left-0 bg-light" style="z-index: 2000;">
+      <th class="position-sticky bg-light" style="left: 0;">Sno.</th>
+      <th class="position-sticky bg-light" style="left: 50px;" width="200px">Country</th>
+      <th width="200px">Capital</th>
+      <th width="200px">Flag</th>
+      <th width="200px">Flag</th>
+      <th width="500px">Flag</th>
+      <th width="200px">Flag</th>
+      <th width="200px">Flag</th>
+      <th width="200px">Flag</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries;let i = index">
+        <td class="position-sticky bg-light" style="left:0px;width:50px;">{{i+1}}</td>
+        <td class="position-sticky bg-light" style="left:50px">{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td>
+          <img [src]="country.flag" width="200px">
+        </td>
+        <td>{{country.alpha3Code}}</td>
+        <td>{{country.subregion}}</td>
+        <td>{{country.region}}</td>
+        <td>{{country.population}}</td>
+        <td>{{country.demonym}}</td>
+        <td>{{country.area}}</td>
+        <td>{{country.numericCode}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style="border:1px solid;padding:10px;margin:10px;display: inline-block;max-width:50%;overflow: scroll;">
+  <h1 style="width:500px">
+    EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY 
+    EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY 
+    EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY EDUPOLY 
+  </h1>
+</div>
+
+<!-- {"name":"Afghanistan","topLevelDomain":[".af"],"alpha2Code":"AF","alpha3Code":"AFG","callingCodes":["93"],"capital":"Kabul","altSpellings":["AF","Afġānistān"],"subregion":"Southern Asia","region":"Asia","population":40218234,"latlng":[33.0,65.0],"demonym":"Afghan","area":652230.0,"timezones":["UTC+04:30"],"borders":["IRN","PAK","TKM","UZB","TJK","CHN"],"nativeName":"افغانستان","numericCode":"004","flags":{"svg":"https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg","png":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png"},"currencies":[{"code":"AFN","name":"Afghan afghani","symbol":"؋"}],"languages":[{"iso639_1":"ps","iso639_2":"pus","name":"Pashto","nativeName":"پښتو"},{"iso639_1":"uz","iso639_2":"uzb","name":"Uzbek","nativeName":"Oʻzbek"},{"iso639_1":"tk","iso639_2":"tuk","name":"Turkmen","nativeName":"Türkmen"}],"translations":{"br":"Afghanistan","pt":"Afeganistão","nl":"Afghanistan","hr":"Afganistan","fa":"افغانستان","de":"Afghanistan","es":"Afganistán","fr":"Afghanistan","ja":"アフガニスタン","it":"Afghanistan","hu":"Afganisztán"},"flag":"https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg","regionalBlocs":[{"acronym":"SAARC","name":"South Asian Association for Regional Cooperation"}],"cioc":"AFG","independent":true} -->
