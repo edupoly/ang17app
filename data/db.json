@@ -1,13 +1,49 @@
 {
   "books": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 2, "title": "php internals", "author": "kondababu" },
-    { "id": 3, "title": "bootstrap 5", "author": "dhrithiman" },
-    { "id": 4, "title": "photoshop", "author": "naveen" },
-    { "id": 5, "title": "Angular Reasons", "author": "praveen gubbala"}
+    {
+      "id": 2,
+      "title": "php internals",
+      "author": "kondababu"
+    },
+    {
+      "id": 3,
+      "title": "bootstrap 5",
+      "author": "dhrithiman s"
+    },
+    {
+      "id": 4,
+      "title": "photoshop",
+      "author": "naveen"
+    },
+    {
+      "id": 5,
+      "title": "Angular Reasons",
+      "author": "praveen gubbala"
+    },
+    {
+      "title": "javascript adv",
+      "author": "rohit",
+      "id": 6
+    },
+    {
+      "title": "fun with css",
+      "author": "praveen",
+      "id": 7
+    },
+    {
+      "title": "react hooks",
+      "author": "kavya t",
+      "id": 8
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }
