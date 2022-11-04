@@ -1,0 +1,13 @@
+{
+  "books": [
+    { "id": 1, "title": "json-server", "author": "typicode" },
+    { "id": 2, "title": "php internals", "author": "kondababu" },
+    { "id": 3, "title": "bootstrap 5", "author": "dhrithiman" },
+    { "id": 4, "title": "photoshop", "author": "naveen" },
+    { "id": 5, "title": "Angular Reasons", "author": "praveen gubbala"}
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
