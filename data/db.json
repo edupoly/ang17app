@@ -11,11 +11,6 @@
       "author": "dhrithiman s"
     },
     {
-      "id": 4,
-      "title": "photoshop",
-      "author": "naveen"
-    },
-    {
       "id": 5,
       "title": "Angular Reasons",
       "author": "praveen gubbala"
@@ -34,6 +29,11 @@
       "title": "react hooks",
       "author": "kavya t",
       "id": 8
+    },
+    {
+      "title": "How to win Nodejs",
+      "author": "Harsh",
+      "id": 9
     }
   ],
   "comments": [
