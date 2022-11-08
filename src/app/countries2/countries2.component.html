@@ -1,0 +1,14 @@
+
+<div class="border border-3 border-danger m-2 p-2 d-flex">
+  <div>
+    <ul>
+      <li *ngFor="let country of countries">
+        <a [routerLink]="['/countries2/countryDetails',country.name]">{{country.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Details</h3>
+    <router-outlet></router-outlet>
+  </div>
+</div>

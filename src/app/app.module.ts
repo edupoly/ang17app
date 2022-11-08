@@ -11,7 +11,9 @@ import { CoursesComponent } from './courses/courses.component';
 import { AngularComponent } from './angular/angular.component';
 import { ReactComponent } from './react/react.component';
 import { CountriesComponent } from './countries/countries.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
+import { Countries2Component } from './countries2/countries2.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { HttpClientModule} from '@angular/common/http'
     CoursesComponent,
     AngularComponent,
     ReactComponent,
-    CountriesComponent
+    CountriesComponent,
+    CountrydetailsComponent,
+    Countries2Component
   ],
   imports: [
     BrowserModule,
