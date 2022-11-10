@@ -1,0 +1,13 @@
+<div class="border border-info p-2 m-2">
+  <h1>Add Course</h1>
+  <div [formGroup]="courseForm">
+    <input type="text" placeholder="Enter Course Title" formControlName="title"><br>
+    <div *ngIf="courseForm.controls.title.touched && courseForm.controls.title.errors">
+      <h4 class="text-danger" *ngIf="courseForm.controls.title.errors['required']">Title is a mandatory field</h4>
+      <h4 class="text-danger" *ngIf="courseForm.controls.title.errors['minlength']">Title must have at least 3 chars</h4>
+    </div>
+    <input type="text" placeholder="Enter Course Price" formControlName="price"><br>
+    <input type="text" placeholder="Enter Course Trainer" formControlName="trainer"><br>
+    <button (click)="addCourse()">Add Course</button>
+  </div>
+</div>

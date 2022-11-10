@@ -1,12 +1,6 @@
 <div class="border border-3 border-warning m-2 p-2">
-  <p>Courses works!</p>
+  <h1>List of Courses....</h1>
   <ul>
-    <li>
-      <a routerLink="angular">Angular</a>
-    </li>
-    <li>
-      <a routerLink="react">React</a>
-    </li>
+    <li *ngFor="let course of courses">{{course.title}}</li>
   </ul>
-  <router-outlet></router-outlet>
 </div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AddcourseComponent } from './addcourse/addcourse.component';
 import { AngularComponent } from './angular/angular.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { CountriesComponent } from './countries/countries.component';
@@ -59,6 +60,10 @@ const routes: Routes = [
         component:CountrydetailsComponent
       }
     ]
+  },
+  {
+    path:"addCourse",
+    component:AddcourseComponent
   }
 ];
 

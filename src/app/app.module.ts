@@ -13,7 +13,9 @@ import { ReactComponent } from './react/react.component';
 import { CountriesComponent } from './countries/countries.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
-import { Countries2Component } from './countries2/countries2.component'
+import { Countries2Component } from './countries2/countries2.component';
+import { AddcourseComponent } from './addcourse/addcourse.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,12 +28,15 @@ import { Countries2Component } from './countries2/countries2.component'
     ReactComponent,
     CountriesComponent,
     CountrydetailsComponent,
-    Countries2Component
+    Countries2Component,
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
