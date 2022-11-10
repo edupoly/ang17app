@@ -65,6 +65,12 @@
       "price": "sd",
       "trainer": null,
       "id": 11
+    },
+    {
+      "title": "SAP",
+      "price": "123442",
+      "trainer": "jyothi",
+      "id": 12
     }
   ],
   "posts": [
