@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient,public router:Router) { }
 
   ngOnInit(): void {
     this.getCourses();
@@ -18,5 +19,15 @@ export class CoursesComponent implements OnInit {
     this.http.get("http://localhost:3000/courses").subscribe((courses)=>{
       this.courses=courses;
     })
+  }
+  deleteCourse(id:any){
+    this.http.delete(`http://localhost:3000/courses/${id}`).subscribe((data)=>{
+      console.log(data);
+      alert("course deleted")
+      this.getCourses();
+    })
+  }
+  gotoEdit(id:any){
+    this.router.navigate(['/editCourse',id])
   }
 }

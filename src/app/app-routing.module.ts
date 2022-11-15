@@ -8,6 +8,7 @@ import { CountriesComponent } from './countries/countries.component';
 import { Countries2Component } from './countries2/countries2.component';
 import { CountrydetailsComponent } from './countrydetails/countrydetails.component';
 import { CoursesComponent } from './courses/courses.component';
+import { EditcourseComponent } from './editcourse/editcourse.component';
 import { HomeComponent } from './home/home.component';
 import { ReactComponent } from './react/react.component';
 import { ServicesComponent } from './services/services.component';
@@ -64,6 +65,10 @@ const routes: Routes = [
   {
     path:"addCourse",
     component:AddcourseComponent
+  },
+  {
+    path:'editCourse/:id',
+    component:EditcourseComponent
   }
 ];
 

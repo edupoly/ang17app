@@ -1,12 +1,6 @@
 {
   "courses": [
     {
-      "title": "Mongodb",
-      "price": "15000",
-      "trainer": "Ganesh",
-      "id": 1
-    },
-    {
       "title": "MEAN",
       "price": "45000",
       "trainer": "Praveen",
@@ -25,52 +19,10 @@
       "id": 4
     },
     {
-      "title": null,
-      "price": "19239",
-      "trainer": "himaja",
-      "id": 5
-    },
-    {
-      "title": "",
-      "price": "123",
-      "trainer": "xcv",
-      "id": 6
-    },
-    {
-      "title": "",
-      "price": "sd",
-      "trainer": "23",
-      "id": 7
-    },
-    {
-      "title": "sde",
-      "price": "dssd",
-      "trainer": "xc",
-      "id": 8
-    },
-    {
-      "title": "",
-      "price": "",
-      "trainer": null,
-      "id": 9
-    },
-    {
-      "title": "a",
-      "price": "",
-      "trainer": null,
-      "id": 10
-    },
-    {
-      "title": "sdf",
-      "price": "sd",
-      "trainer": null,
+      "title": "semi conductors",
+      "price": "93939",
+      "trainer": "farhan",
       "id": 11
-    },
-    {
-      "title": "SAP",
-      "price": "123442",
-      "trainer": "jyothi",
-      "id": 12
     }
   ],
   "posts": [

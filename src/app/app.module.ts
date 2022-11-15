@@ -16,6 +16,7 @@ import { CountrydetailsComponent } from './countrydetails/countrydetails.compone
 import { Countries2Component } from './countries2/countries2.component';
 import { AddcourseComponent } from './addcourse/addcourse.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditcourseComponent } from './editcourse/editcourse.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CountriesComponent,
     CountrydetailsComponent,
     Countries2Component,
-    AddcourseComponent
+    AddcourseComponent,
+    EditcourseComponent
   ],
   imports: [
     BrowserModule,

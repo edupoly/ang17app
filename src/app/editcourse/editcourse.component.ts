@@ -1,22 +1,35 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl, Validators, Form } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-addcourse',
-  templateUrl: './addcourse.component.html',
-  styleUrls: ['./addcourse.component.css']
+  selector: 'app-editcourse',
+  templateUrl: './editcourse.component.html',
+  styleUrls: ['./editcourse.component.css']
 })
-export class AddcourseComponent implements OnInit {
+export class EditcourseComponent implements OnInit {
 
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient,public ar:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.ar.params.subscribe((p)=>{
+      this.getCourseDetailsById(p['id'])
+    })
+  }
+  getCourseDetailsById(id:any){
+    this.http.get(`http://localhost:3000/courses/${id}`).subscribe((course:any)=>{
+      // this.courseForm.get('title')?.setValue(course['title'])
+      // this.courseForm.get('price')?.setValue(course['price'])
+      // this.courseForm.get('trainer')?.setValue(course['trainer'])
+      this.courseForm.setValue(course)
+    })
   }
   courseForm = new FormGroup({
     title:new FormControl('',[Validators.required,Validators.minLength(3)],[this.isCourseUnique.bind(this)]),
     price:new FormControl('',[Validators.required,this.isNumberValidation]),
-    trainer:new FormControl()
+    trainer:new FormControl(),
+    id:new FormControl()
   })
   isCourseUnique(fc:any):Promise<any>{
     var p = new Promise((resolve,reject)=>{
@@ -40,12 +53,9 @@ export class AddcourseComponent implements OnInit {
       return null
     }
   }
-  addCourse(){
-    console.log(this.courseForm)
-    if(this.courseForm.status==='VALID'){
-      this.http.post("http://localhost:3000/courses",this.courseForm.value)
-      .subscribe((res)=>{alert("course added")})
-    }
-    
+  updateCourse(){
+    var id = this.courseForm.value.id;
+    this.http.put(`http://localhost:3000/courses/${id}`,this.courseForm.value)
+    .subscribe((res)=>{alert("Course Updated Success")})
   }
 }
