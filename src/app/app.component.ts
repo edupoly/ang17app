@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component } from '@angular/core';
+import { CountriesService } from './countries.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ang17app';
   countries:any=[]
-  constructor(public http:HttpClient){
-    this.http.get("https://restcountries.com/v2/all")
+  constructor(public cS:CountriesService){
+    // this.cS.getCountries()
+    // .then((res)=>{
+    //   this.countries=res
+    // })
+    
+    this.cS.getCountries()
     .subscribe((res)=>{
       this.countries=res;
     })
+
   }
 }
