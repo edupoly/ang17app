@@ -20,7 +20,7 @@ export class FoodComponent implements OnInit {
       retryWhen(err=>{
         return err.pipe(
           delay(4000),
-          take(5)
+          take(10)
         )
       })
     )
