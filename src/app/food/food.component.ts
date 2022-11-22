@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { retry,delay,take, debounceTime, map, filter,of, retryWhen, catchError, repeat } from 'rxjs';
+import { FoodService } from '../food.service';
 
 @Component({
   selector: 'app-food',
@@ -9,22 +10,11 @@ import { retry,delay,take, debounceTime, map, filter,of, retryWhen, catchError, 
 })
 export class FoodComponent implements OnInit {
 
-  constructor(public http:HttpClient) { 
+  constructor(public http:HttpClient,public fs:FoodService) { 
   }
   foodItems:any;
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/foodItems")
-    .pipe(
-
-      //with retryWhen
-      retryWhen(err=>{
-        return err.pipe(
-          delay(4000),
-          take(10)
-        )
-      })
-    )
-    .subscribe((res)=>this.foodItems=res);
+    
 
     // this.http.get("http://localhost:3000/foodItems")
     // .pipe(

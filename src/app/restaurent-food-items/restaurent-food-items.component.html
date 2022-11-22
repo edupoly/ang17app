@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap justify-content-between">
+  <div class="card" style="width: 18rem;" *ngFor="let item of menu" >
+    <div class="card-header">
+      {{item.foodName}}
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">Type:{{item.foodType}}</h5>
+      <h5 class="card-title">Type:{{item.protein}}</h5>
+      <h5 class="card-title">Type:{{item.calories}}</h5>
+      <button class="btn btn-primary">Add To Cart</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap justify-content-between">
+  <div class="card" style="width: 18rem;" *ngFor="let restaurant of restaurents" >
+    <div class="card-header">
+      {{restaurant.restaurant}}
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">FoodItems:{{restaurant.foodItems.length}}</h5>
+      <button (click)="showFoodItems(restaurant.foodItems)" class="btn btn-primary">Food Items</button>
+    </div>
+  </div>
+</div>
+
+
