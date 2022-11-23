@@ -3,7 +3,7 @@
   "users": [
     {
       "username": "praveen",
-      "password": "abc",
+      "password": 123,
       "userId": 12,
       "role": 10000
     },

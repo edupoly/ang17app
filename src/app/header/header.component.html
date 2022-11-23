@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/">Restaurants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/addFoodItem">Add FoodItem</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="/cart">Cart {{cartItems.length}}</a>
+      </li>
+      
+      <li class="nav-item" *ngIf="!$isLoggedIn">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item" *ngIf="$isLoggedIn">
+        <button class="nav-link btn btn-danger" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
